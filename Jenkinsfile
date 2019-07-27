@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Prod') {
             steps {
-                sh 'tomcat --version'
+                sh 'docker run -d -p 8081:8080 --name tomcat8 tomcat:8'
             }
         }
     }
