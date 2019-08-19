@@ -20,7 +20,7 @@ node {
         }
         stage('Exec Gradle') {
             //rtGradle.run rootDir: "jfrog-artifactory-test/", buildFile: 'build.gradle', tasks: 'clean artifactoryPublish', buildInfo: buildInfo
-            rtGradle.run buildFile: 'build.gradle', tasks: buildInfo: buildInfo
+            rtGradle.run buildFile: 'build.gradle', tasks: 'clean'
         }
        // stage('Publish build info') {
          //   server.publishBuildInfo buildInfo
